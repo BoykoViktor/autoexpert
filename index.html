@@ -17,7 +17,7 @@
     <div class="tabs-slider">
       <div class="tabs-slider__inner">
         <div class="swipe-slider-wrapper">
-          <div class="swiper tabs-slider__body tabs-slider-js">
+          <div class="swiper tabs-slider__body vertical-swiper-js">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="tabs-slider__item modal-btn-js" data-car="bentley">Bentley</div>
@@ -48,15 +48,13 @@
               </div>
             </div>
             <div class="tabs-slider__arrows">
-              <button class="tabs-slider__arrow tabs-slider__arrow--prev"></button>
-              <button class="tabs-slider__arrow tabs-slider__arrow--next"></button>
+              <button class="tabs-slider__arrow tabs-slider__arrow--prev swiper-arrow swiper-arrow--prev"></button>
+              <button class="tabs-slider__arrow tabs-slider__arrow--next swiper-arrow swiper-arrow--next"></button>
             </div>
 
             <div class="tabs-slider__progress swiper-pagination"></div>
           </div>
         </div>
-
-
       </div>
     </div>
 
@@ -65,7 +63,7 @@
   <div class="popup-modal" style="display: none;">
     <div class="popup-modal__inner">
       <div class="popup-modal__body">
-        <div class="popup-modal__close"></div>
+        <div class="popup-modal__close popup-close-js"></div>
         <div class="popup-modal__content">
           <div class="details">
             <div class="details__name"></div>

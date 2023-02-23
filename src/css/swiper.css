@@ -1,21 +1,28 @@
-.tabs-slider .swiper {
+.swiper {
   overflow: visible;
 }
-.tabs-slider .swiper-slide {
+
+.swiper-slide {
   text-align: center;
   font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.tabs-slider .swiper-slide img {
+
+.swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.tabs-slider .swiper-pagination {
+
+.wrapper .swiper-pagination {
   top: auto;
   bottom: 0;
+}
+
+.swiper-arrow {
+  cursor: pointer;
 }/*# sourceMappingURL=swiper.css.map */

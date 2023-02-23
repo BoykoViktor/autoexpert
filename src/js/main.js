@@ -1,5 +1,80 @@
-document.addEventListener('DOMContentLoaded', () => {
-  tabSlider = new Swiper(".tabs-slider-js", {
+class ReportPopupModal {
+  constructor(popup, buttons) {
+    this.popup = popup
+    this.buttons = buttons
+    this.body = document.querySelector('body')
+    this.details = this.popup.querySelector('.details')
+    this.closeButton = this.popup.querySelector('.popup-close-js')
+
+    this.cars = carsInfo
+    this.imagesUrl = '/static/images/'
+
+    this.buttons.forEach((button) => {
+      button.addEventListener('click', this.open.bind(this))
+    })
+
+    this.popup.addEventListener('click', this.close.bind(this))
+    this.closeButton.addEventListener('click', this.close.bind(this))
+  }
+
+  open(event) {
+    const car = event.target.dataset.car
+    this.setParams(car)
+    this.body.classList.add('overflow_h')
+    this.popup.classList.add('open')
+  }
+
+  close(event) {
+    if (event.target.closest('.popup-modal__body') && !event.target.classList.contains('popup-close-js')) return
+    this.body.classList.remove('overflow_h')
+    this.popup.classList.remove('open')
+
+    setTimeout( () => {
+      this.clearParams()
+    }, 500);
+    
+  }
+
+  setParams(car) {
+    const selectedCar = this.cars[car]
+
+    this.details.querySelector('.details__name').innerText = selectedCar.name
+    this.details.querySelector('.details__type').innerText = selectedCar.type
+
+    if (selectedCar.topImages) {
+      const { mainImage, thumbnails } = selectedCar.topImages
+      const topImage = document.createElement('img')
+      topImage.setAttribute('src', `${this.imagesUrl + mainImage}`)
+      this.details.querySelector('.details__image').appendChild(topImage)
+
+      thumbnails.forEach((thumbName) => {
+        let thumb = document.createElement('img')
+        thumb.setAttribute('src', `${this.imagesUrl + thumbName}`)
+        this.details.querySelector('.details__thumbs').appendChild(thumb)
+      })
+    }
+
+    const { params } = selectedCar
+    for (const key in params) {
+      const paramField = this.details.querySelector(`.details__param [data-name="${key}"]`)
+      paramField.innerText = params[key] || '-'
+    }
+  }
+
+  clearParams() {
+    this.details.querySelector('.details__name').innerHTML = ''
+    this.details.querySelector('.details__type').innerHTML = ''
+    this.details.querySelector('.details__image').innerHTML = ''
+    this.details.querySelector('.details__thumbs').innerHTML = ''
+    const paramFields = this.details.querySelectorAll('.details__param .details__params-body')
+    paramFields.forEach((field) => {
+      field.innerText = '-'
+    })
+  }
+}
+
+function verticalSlider() {
+  return verticalSwiper = new Swiper(".vertical-swiper-js", {
     slidesPerView: 3,
     spaceBetween: 30,
     pagination: {
@@ -7,70 +82,21 @@ document.addEventListener('DOMContentLoaded', () => {
       type: "progressbar",
     },
     navigation: {
-      nextEl: ".tabs-slider__arrow--next",
-      prevEl: ".tabs-slider__arrow--prev",
+      nextEl: ".swiper-arrow--next",
+      prevEl: ".swiper-arrow--prev",
     },
   });
+}
 
 
-  const docWrapper = document.querySelector('body'),
-        popupModal = document.querySelector('.popup-modal'),
-        popupButton = document.querySelectorAll('.modal-btn-js'),
-        modalClose = popupModal.querySelector('.popup-modal__close'),
-        details = popupModal.querySelector('.details');
+document.addEventListener('DOMContentLoaded', () => {
+  const reportModalButtons = document.querySelectorAll('.modal-btn-js'),
+        reportModal = document.querySelector('.popup-modal');
 
-  let imgUrl = 'https://raw.githubusercontent.com/BoykoViktor/carsSite/preview/static/images/';
+  reportModal.removeAttribute('style')
 
-  popupModal.removeAttribute('style')
+  verticalSlider();
 
-  function openModal(docWrapper, popupModal) {
-    docWrapper.classList.add('overflow_h')
-    popupModal.classList.add('open')
-  }
+  new ReportPopupModal(reportModal, reportModalButtons)
 
-  function closeModal(docWrapper, popupModal) {
-    docWrapper.classList.remove('overflow_h')
-    popupModal.classList.remove('open')
-  }
-
-  popupButton.forEach(button => {
-    button.addEventListener('click', function () {
-      const carName = button.dataset.car,
-            selectedCar = carsInfo[carName]
-      details.querySelector('.details__name').innerText = selectedCar.name
-      details.querySelector('.details__type').innerText = selectedCar.type
-
-      if (selectedCar.topImages) {
-        const { mainImage, thumbnails } = selectedCar.topImages
-        const topImage = document.createElement('img')
-        topImage.setAttribute('src', `${imgUrl+mainImage}`)
-        details.querySelector('.details__image').appendChild(topImage)
-
-        thumbnails.forEach((thumbName) => {
-          let thumb = document.createElement('img')
-          thumb.setAttribute('src', `${imgUrl+thumbName}`)
-          details.querySelector('.details__thumbs').appendChild(thumb)
-        })
-      }
-      
-
-      const {params} = selectedCar
-      
-      for (key in params) {
-        details.querySelector(`.details__param [data-name="${key}"]`).innerText = params[key]
-      }
-
-      openModal(docWrapper, popupModal)
-    })
-  })
-
-  modalClose.addEventListener('click', function () {
-    closeModal(docWrapper, popupModal)
-    setTimeout( () => {
-      details.querySelector('.details__name').innerHTML = ''
-      details.querySelector('.details__type').innerHTML = ''
-      details.querySelector('.details__image').innerHTML = ''
-      details.querySelector('.details__thumbs').innerHTML = ''
-    }, 500)
-  })
 });

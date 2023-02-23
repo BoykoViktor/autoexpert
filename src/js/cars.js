@@ -56,6 +56,7 @@ var carsInfo = {
       carcase: "test 5",
       color: "test 6",
       equipment: "test 7",
+      gear: "gear",
       engine: "test 8",
       transmission: "test 9",
       rudder: "test 10",

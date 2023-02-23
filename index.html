@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="src/css/main.css">
+  <title> Expert </title>
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <div class="tabs-slider">
+      <div class="tabs-slider__inner">
+        <div class="swipe-slider-wrapper">
+          <div class="swiper tabs-slider__body tabs-slider-js">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="tabs-slider__item modal-btn-js" data-car="bentley">Bentley</div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="tabs-slider__item modal-btn-js" data-car="testCar">
+                  Slide 2
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="tabs-slider__item">
+                  Slide 3
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="tabs-slider__item">
+                  Slide 4
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="tabs-slider__item">
+                  Slide 5
+                </div>
+              </div>
+            </div>
+            <div class="tabs-slider__arrows">
+              <button class="tabs-slider__arrow tabs-slider__arrow--prev"></button>
+              <button class="tabs-slider__arrow tabs-slider__arrow--next"></button>
+            </div>
+
+            <div class="tabs-slider__progress swiper-pagination"></div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="popup-modal" style="display: none;">
+    <div class="popup-modal__inner">
+      <div class="popup-modal__body">
+        <div class="popup-modal__close"></div>
+        <div class="popup-modal__content">
+          <div class="details">
+            <div class="details__name"></div>
+            <div class="details__type"></div>
+            <div class="details__image"></div>
+            <div class="details__thumbs"></div>
+
+            <div class="details__params">
+              <div class="details__param">
+                <div class="details__params-title">Год</div>
+                <div class="details__params-body" data-name="year"></div>
+              </div>
+
+              <div class="details__param">
+                <div class="details__params-title">Пробег</div>
+                <div class="details__params-body" data-name="mileage"></div>
+              </div>
+
+              <div class="details__param">
+                <div class="details__params-title">Кузов</div>
+                <div class="details__params-body" data-name="carcase"></div>
+              </div>
+
+              <div class="details__param">
+                <div class="details__params-title">Цвет</div>
+                <div class="details__params-body" data-name="color"></div>
+              </div>
+
+              <div class="details__param">
+                <div class="details__params-title">Комплектация</div>
+                <div class="details__params-body" data-name="equipment"></div>
+              </div>
+
+              <div class="details__param">
+                <div class="details__params-title">Привод</div>
+                <div class="details__params-body" data-name="gear"></div>
+              </div>
+
+              <div class="details__param">
+                <div class="details__params-title">Двигатель</div>
+                <div class="details__params-body" data-name="engine"></div>
+              </div>
+
+              <div class="details__param">
+                <div class="details__params-title">Коробка</div>
+                <div class="details__params-body" data-name="transmission"></div>
+              </div>
+
+              <div class="details__param">
+                <div class="details__params-title">Руль</div>
+                <div class="details__params-body" data-name="rudder"></div>
+              </div>
+
+              <div class="details__param">
+                <div class="details__params-title">Владельцы</div>
+                <div class="details__params-body" data-name="owners"></div>
+              </div>
+
+              <div class="details__param">
+                <div class="details__params-title">ПТС</div>
+                <div class="details__params-body" data-name="pts"></div>
+              </div>
+
+              <div class="details__param">
+                <div class="details__params-title">Владение</div>
+                <div class="details__params-body" data-name="holded"></div>
+              </div>
+
+              <div class="details__param">
+                <div class="details__params-title">Таможня</div>
+                <div class="details__params-body" data-name="customs"></div>
+              </div>
+
+              <div class="details__param">
+                <div class="details__params-title">VIN</div>
+                <div class="details__params-body" data-name="vin"></div>
+              </div>
+
+              <div class="details__param">
+                <div class="details__params-title">Состояние</div>
+                <div class="details__params-body" data-name="condition"></div>
+              </div>
+            </div>
+            <div class="details__review">
+              <div class="details__review-slider"></div>
+            </div>
+
+            <div class="details__note"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script src="src/js/cars.js"></script>
+  <script src="src/js/main.js"></script>
+</body>
+
+</html>

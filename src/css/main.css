@@ -1,0 +1,62 @@
+@import url("https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css");
+@import url("./swiper.css");
+@import url("./popupModal.css");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.centered-block {
+  max-width: 1440px;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto;
+}
+
+.swipe-slider-wrapper {
+  max-width: 1440px;
+}
+
+.tabs-slider {
+  width: 100%;
+  position: relative;
+  --swiper-pagination-color: #FF1616;
+  --swiper-pagination-progressbar-bg-color: rgba(202, 202, 208, 0.6);
+}
+.tabs-slider__inner {
+  max-width: 1670px;
+  margin-left: auto;
+  overflow: hidden;
+}
+.tabs-slider__body {
+  padding: 64px 0;
+}
+.tabs-slider__item {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  color: #fff;
+  width: 100%;
+  cursor: pointer;
+}
+.tabs-slider__arrows {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.tabs-slider__arrow {
+  width: 30px;
+  height: 30px;
+}/*# sourceMappingURL=main.css.map */

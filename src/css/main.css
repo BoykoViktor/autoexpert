@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+body {
+  font-size: 20px;
+}
+
 .wrapper {
   display: flex;
   min-height: 100vh;
@@ -59,4 +63,33 @@
 .tabs-slider__arrow {
   width: 30px;
   height: 30px;
+}
+
+.popup-modal .details__thumbs {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.popup-modal .details__thumbs img {
+  max-width: 100%;
+}
+.popup-modal .details__params {
+  padding: 10px 0;
+}
+.popup-modal .details__params-title {
+  padding-right: 10px;
+  max-width: 50%;
+  width: 100%;
+}
+.popup-modal .details__params-body {
+  max-width: 50%;
+  width: 100%;
+}
+.popup-modal .details__param {
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+.popup-modal .details__param:nth-child(even) {
+  background: #EEEFF0;
 }/*# sourceMappingURL=main.css.map */

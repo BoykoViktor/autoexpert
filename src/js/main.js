@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modalClose = popupModal.querySelector('.popup-modal__close'),
         details = popupModal.querySelector('.details');
 
-  let imgUrl = '/static/images/';
+  let imgUrl = 'https://raw.githubusercontent.com/BoykoViktor/carsSite/preview/static/images';
 
   popupModal.removeAttribute('style')
 

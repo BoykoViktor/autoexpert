@@ -15,24 +15,39 @@ class ReportPopupModal {
 
     this.popup.addEventListener('click', this.close.bind(this))
     this.closeButton.addEventListener('click', this.close.bind(this))
+    window.addEventListener('hashchange', this.hashChanged.bind(this));
+    
   }
 
+  hashChanged() {
+    if (location.hash.includes('#modalOpened')) return
+    this.body.classList.remove('overflow_h')
+    this.popup.classList.remove('open')
+    setTimeout( () => {
+      this.clearParams()
+    }, 500);
+  }
+  
   open(event) {
     const car = event.target.dataset.car
     this.setParams(car)
+
     this.body.classList.add('overflow_h')
     this.popup.classList.add('open')
+    window.location.hash = 'modalOpened'
   }
 
   close(event) {
     if (event.target.closest('.popup-modal__body') && !event.target.classList.contains('popup-close-js')) return
     this.body.classList.remove('overflow_h')
     this.popup.classList.remove('open')
-
+    
     setTimeout( () => {
       this.clearParams()
     }, 500);
-    
+
+    console.log(location.hash)
+
   }
 
   setParams(car) {

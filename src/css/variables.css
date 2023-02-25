@@ -1,0 +1,11 @@
+:root {
+  --accent: rgba(255, 22, 22, 1);
+  --vulcan: rgba(5, 19, 38, 1);
+  --milk: rgba(247, 247, 248, 1);
+  --grey: rgba(202, 202, 208, 1);
+  --lightGrey: rgba(238,239,240,1);
+  --darkGrey: rgba(138, 138, 153, 1);
+
+  --swiper-pagination-color: var(--accent);
+  --swiper-pagination-progressbar-bg-color: var(--grey);
+}

@@ -20,36 +20,98 @@
           <div class="swiper tabs-slider__body vertical-swiper-js">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="tabs-slider__item modal-btn-js" data-car="bentley">Bentley</div>
-              </div>
+                <div class="tabs-slider__item">
+                  <div class="tabs-slider__item-image">
+                    <img src="/static/images/bentley.jpg" alt="bentley">
+                  </div>
 
-              <div class="swiper-slide">
-                <div class="tabs-slider__item modal-btn-js" data-car="testCar">
-                  Slide 2
+                  <div class="tabs-slider__item-details">
+                    <div class="tabs-slider__item-name">2019 Bentley Continental GT 3</div>
+                    <div class="tabs-slider__item-run">10 833 км</div>
+
+                    <button class="tabs-slider__item-button modal-btn-js" data-car="bentley">
+                      Смотреть отчёт
+                    </button>
+                  </div>
                 </div>
               </div>
 
               <div class="swiper-slide">
                 <div class="tabs-slider__item">
-                  Slide 3
+                  <div class="tabs-slider__item-image">
+                    <img src="/static/images/rollsRoys1.jpg" alt="rollsRoys">
+                  </div>
+
+                  <div class="tabs-slider__item-details">
+                    <div class="tabs-slider__item-name">2014 Rolls-Royce Wraith</div>
+                    <div class="tabs-slider__item-run">17 750 км</div>
+
+                    <button class="tabs-slider__item-button modal-btn-js" data-car="testCar">
+                      Смотреть отчёт
+                    </button>
+                  </div>
                 </div>
               </div>
 
               <div class="swiper-slide">
                 <div class="tabs-slider__item">
-                  Slide 4
+                  <div class="tabs-slider__item-image">
+                    <img src="/static/images/rollsRoys1.jpg" alt="rollsRoys">
+                  </div>
+
+                  <div class="tabs-slider__item-details">
+                    <div class="tabs-slider__item-name">test name</div>
+                    <div class="tabs-slider__item-run">XXXXXX км</div>
+
+                    <button class="tabs-slider__item-button">
+                      Смотреть отчёт
+                    </button>
+                  </div>
                 </div>
               </div>
 
               <div class="swiper-slide">
                 <div class="tabs-slider__item">
-                  Slide 5
+                  <div class="tabs-slider__item-image">
+                    <img src="/static/images/rollsRoys1.jpg" alt="rollsRoys">
+                  </div>
+
+                  <div class="tabs-slider__item-details">
+                    <div class="tabs-slider__item-name">test name</div>
+                    <div class="tabs-slider__item-run">XXXXXX км</div>
+
+                    <button class="tabs-slider__item-button">
+                      Смотреть отчёт
+                    </button>
+                  </div>
                 </div>
               </div>
+
+              <div class="swiper-slide">
+                <div class="tabs-slider__item">
+                  <div class="tabs-slider__item-image">
+                    <img src="/static/images/rollsRoys1.jpg" alt="rollsRoys">
+                  </div>
+
+                  <div class="tabs-slider__item-details">
+                    <div class="tabs-slider__item-name">test name</div>
+                    <div class="tabs-slider__item-run">XXXXXX км</div>
+
+                    <button class="tabs-slider__item-button">
+                      Смотреть отчёт
+                    </button>
+                  </div>
+                </div>
+              </div>
+
             </div>
-            <div class="tabs-slider__arrows">
-              <button class="tabs-slider__arrow tabs-slider__arrow--prev swiper-arrow swiper-arrow--prev"></button>
-              <button class="tabs-slider__arrow tabs-slider__arrow--next swiper-arrow swiper-arrow--next"></button>
+            <div class="tabs-slider__arrows swiper-arrows">
+              <button class="tabs-slider__arrow tabs-slider__arrow--prev swiper-arrow swiper-arrow--prev">
+                <span></span>
+              </button>
+              <button class="tabs-slider__arrow tabs-slider__arrow--next swiper-arrow swiper-arrow--next">
+                <span></span>
+              </button>
             </div>
 
             <div class="tabs-slider__progress swiper-pagination"></div>
@@ -147,12 +209,61 @@
                 <div class="details__params-body" data-name="condition"></div>
               </div>
             </div>
+
             <div class="details__review">
+              <div class="details__review-title">Детализированный осмотр</div>
+              <div class="details__review-note"></div>
+
               <div class="details__review-slider"></div>
             </div>
 
-            <div class="details__note"></div>
+            <div class="details__conclusion">
+              <div class="details__conclusion-title">
+                Заключение диагностики
+              </div>
+
+              <div class="details__conclusion-text">
+                Автомобиль Bentley Continental GT III оказался в хорошем состоянии. Окрашен капот и вся правая сторона. Сделано очень хорошо. Но из-за скола начал облазить лак у шильдика. По технически без нареканий, пробег оригинальный.
+              </div>
+            </div>
           </div>
+
+          <div class="popup-modal__form">
+            <form method="post">
+              <div class="popup-modal__form-title">
+                Для получения быстрой помощи закажите звонок или свяжитесь с нами сразу напрямую:
+              </div>
+              
+              <div class="form-field">
+                <input type="text" class="text-input" placeholder="Ваше имя">
+              </div>
+
+              <div class="form-field">
+                <input type="tel" class="text-input" placeholder="Телефон">
+              </div>
+
+              <div class="form-field">
+                <span class="note">
+                  Нажимая кнопку, вы соглашаетесь с нашей <a href="javascript:void(0)"> Политикой конфиденциальности</a>
+                </span>
+              </div>
+
+              <div class="form-field">
+                <button type="submit">
+                  Заказать звонок
+                </button>
+              </div>
+            </form>
+
+            <div class="numbers">
+              <a href="tel:88005053503">8 800 505-35-03</a>
+              <a href="tel:89267070703">8 926 707-07-03</a>
+            </div>
+          </div>
+
+          <button class="popup__close popup-close-js">
+            Закрыть
+          </button>
         </div>
       </div>
     </div>

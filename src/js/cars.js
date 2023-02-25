@@ -30,11 +30,11 @@ var carsInfo = {
       description: "Примечание: заводская толщина лакокрасочного покрытия для автомобиля Bentley Continental GT III составляет 150–220 микрон (микрометров, мкм).",
       slides: [
         {
-          image: "bentley1",
+          image: "bentley3.jpg",
           text: "Толщина краски составляет 181 микрон, что свидетельствует о том, что крыша без окраса."
         },
         {
-          image: "bentley2",
+          image: "bentley2.jpg",
           text: "Толщина краски составляет 181 микрон, что свидетельствует о том, что крыша без окраса."
         },
         
@@ -66,6 +66,39 @@ var carsInfo = {
       customs: "test 14",
       vin: "test 15",
       condition: "test 16",
+    },
+
+    topImages: {
+      mainImage: 'bentley2.jpg',
+      thumbnails: ['bentley2.jpg', 'bentley3.jpg', 'bentley4.jpg']
+    },
+
+    detailedView: {
+      description: "Примечание: примечание примечание.",
+      slides: [
+        {
+          image: "bentley2.jpg",
+          text: "Текстовое наполнение."
+        },
+        {
+          image: "bentley2.jpg",
+          text: "Текстовое наполнение 2."
+        },
+
+        {
+          image: "bentley3.jpg",
+          text: "Текстовое наполнение 3."
+        },
+        {
+          image: "bentley4.jpg",
+          text: "Текстовое наполнение 4."
+        },
+      ]
+    },
+
+    conslusion: {
+      title: "Заключение диагностики",
+      text: "Текст заключения."
     }
   }
 }

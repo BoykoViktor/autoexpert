@@ -3,7 +3,7 @@ body.overflow_h {
 }
 @media all and (min-width: 1200px) {
   body.overflow_h {
-    padding-right: 17px;
+    padding-right: 18px;
   }
 }
 
@@ -17,7 +17,7 @@ body.overflow_h {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: auto;
+  overflow: hidden;
   opacity: 0;
   visibility: hidden;
   padding: 20px;
@@ -33,7 +33,7 @@ body.overflow_h {
 .popup-modal__body {
   background: #fff;
   position: relative;
-  padding: 130px 98px 98px;
+  padding: 100px 98px 98px;
   border-radius: 32px;
 }
 .popup-modal__close {
@@ -49,4 +49,5 @@ body.overflow_h {
   visibility: visible;
   opacity: 1;
   pointer-events: all;
+  overflow: auto;
 }/*# sourceMappingURL=popupModal.css.map */

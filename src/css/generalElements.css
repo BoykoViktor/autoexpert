@@ -1,0 +1,40 @@
+.form-field {
+  margin-bottom: 16px;
+}
+.form-field .text-input {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--vulcan);
+  width: 100%;
+  padding: 22px 25px 18px;
+  border: 1px solid var(--grey);
+  border-radius: 50px;
+  outline: none;
+  transition: ease-in-out 0.4s;
+}
+.form-field .text-input:hover, .form-field .text-input:focus {
+  border-color: var(--accent);
+}
+.form-field .note {
+  font-size: 14px;
+  color: var(--darkGrey);
+  margin-bottom: 12px;
+}
+.form-field .note a {
+  text-decoration: none;
+  color: var(--accent);
+}
+.form-field button {
+  width: 100%;
+  border: 0;
+  padding: 21px 30px;
+  font-size: 17px;
+  color: var(--milk);
+  background: var(--accent);
+  transition: ease-in-out 0.3s;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.form-field button:hover {
+  background: var(--vulcan);
+}/*# sourceMappingURL=generalElements.css.map */

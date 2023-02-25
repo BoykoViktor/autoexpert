@@ -1,0 +1,43 @@
+
+.form-field {
+    margin-bottom: 16px;
+    .text-input {
+        font-size: 17px;
+        font-weight: 400;
+        color: var(--vulcan);
+        width: 100%;
+        padding: 22px 25px 18px;
+        border: 1px solid var(--grey);
+        border-radius: 50px;
+        outline: none;
+        transition: ease-in-out 0.4s;
+        &:hover, &:focus {
+            border-color: var(--accent);
+        }
+    }
+
+    .note {
+        font-size: 14px;
+        color: var(--darkGrey);
+        margin-bottom: 12px;
+        a {
+            text-decoration: none;
+            color: var(--accent);
+        }
+    }
+
+    button {
+        width: 100%;
+        border: 0;
+        padding: 21px 30px;
+        font-size: 17px;
+        color: var(--milk);
+        background: var(--accent);
+        transition: ease-in-out 0.3s;
+        border-radius: 50px;
+        cursor: pointer;
+        &:hover {
+            background: var(--vulcan);
+        }
+    }
+}

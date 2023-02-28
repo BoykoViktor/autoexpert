@@ -41,9 +41,8 @@ body {
   position: relative;
 }
 .tabs-slider__arrows {
-  position: absolute;
-  top: 0;
-  right: 0;
+  margin-bottom: 64px;
+  justify-content: flex-end;
 }
 .tabs-slider__inner {
   max-width: 1670px;
@@ -51,11 +50,11 @@ body {
   overflow: hidden;
 }
 .tabs-slider__body {
-  padding: 128px 0 64px;
+  padding: 20px 0 64px;
 }
 .tabs-slider__item {
   width: 100%;
-  background: #fff;
+  background: var(--milk);
   border-radius: 32px;
   overflow: hidden;
 }
@@ -71,7 +70,7 @@ body {
 }
 .tabs-slider__item-run {
   font-size: 14px;
-  font-weight: 17px;
+  font-weight: 500;
   color: var(--darkGrey);
   margin-bottom: 30px;
 }
@@ -192,17 +191,6 @@ body {
   line-height: 30px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='29' viewBox='0 0 33 29' fill='none'%3E%3Cpath d='M10.1147 14.6364C11.4594 17.043 13.7048 18.984 16.485 20.1432C16.6901 20.2273 16.917 20.2637 17.1432 20.2488C17.3695 20.234 17.5874 20.1683 17.7754 20.0582L21.859 17.6941C22.0394 17.5881 22.2479 17.5234 22.465 17.506C22.682 17.4887 22.9006 17.5193 23.1004 17.595L30.7447 20.4404C31.006 20.5347 31.2243 20.7007 31.366 20.913C31.5076 21.1254 31.5648 21.3721 31.5288 21.6154C31.2865 23.2543 30.3635 24.7606 28.9324 25.8523C27.5013 26.9441 25.6603 27.5465 23.7537 27.5469C17.8621 27.5469 12.2118 25.5185 8.04576 21.9079C3.87975 18.2974 1.53931 13.4005 1.53931 8.29437C1.53974 6.64205 2.23484 5.04647 3.49455 3.80621C4.75425 2.56594 6.49224 1.76597 8.38331 1.55599C8.66399 1.52474 8.94875 1.57433 9.19372 1.69711C9.4387 1.81989 9.6303 2.00906 9.73904 2.23549L13.0222 8.87477C13.1076 9.04514 13.1433 9.23109 13.1262 9.41624C13.1091 9.60139 13.0397 9.78006 12.9242 9.93649L10.1964 13.5322C10.075 13.6948 10.0037 13.8817 9.98938 14.075C9.97508 14.2684 10.0182 14.4616 10.1147 14.6364V14.6364Z' stroke='%23FF1616' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") left center/auto no-repeat;
 }
-.popup-modal .popup__close {
+.popup-modal__content > .button {
   width: 100%;
-  border: 0;
-  padding: 21px 30px;
-  font-size: 17px;
-  color: var(--milk);
-  background: var(--accent);
-  transition: ease-in-out 0.3s;
-  border-radius: 50px;
-  cursor: pointer;
-}
-.popup-modal .popup__close:hover {
-  background: var(--vulcan);
 }/*# sourceMappingURL=main.css.map */

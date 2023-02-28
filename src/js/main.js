@@ -118,6 +118,9 @@ class ReportPopupModal {
       this.details.querySelector('.swiper-wrapper').innerHTML = list.join('')
       verticalSlider('.popup-slider-js', 1)
     }
+
+    this.details.querySelector('.details__conclusion-title').innerText = conclusion.title
+    this.details.querySelector('.details__conclusion-text').innerText = conclusion.text
   }
 
   clearParams() {

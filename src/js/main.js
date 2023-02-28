@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   reportModal.removeAttribute('style')
   verticalSlider('.vertical-swiper-js')
   new ReportPopupModal(reportModal, reportModalButtons)
+  new ResponsiveTabs()
 });
 
 class ReportPopupModal {
@@ -17,7 +18,7 @@ class ReportPopupModal {
     this.form = this.popup.querySelector('form')
 
     this.cars = carsInfo
-    this.imagesUrl = '/static/images/'
+    this.imagesUrl = 'https://raw.githubusercontent.com/BoykoViktor/autoexpert/preview/static/images/'
 
     this.buttons.forEach((button) => {
       button.addEventListener('click', this.open.bind(this))
@@ -83,7 +84,6 @@ class ReportPopupModal {
 
     if (detailedView.slides.length) {
       const { slides } = detailedView
-      console.log(slides);
 
       const popupSlider =
         `<div class="swipe-slider-wrapper">
@@ -140,16 +140,127 @@ class ReportPopupModal {
 
 function verticalSlider(selector, items = 3) {
   const space = items > 1 ? 30 : 0
-  return verticalSwiper = new Swiper(`${selector}`, {
-    slidesPerView: items,
-    spaceBetween: space,
-    pagination: {
-      el: ".swiper-pagination",
-      type: "progressbar",
-    },
-    navigation: {
-      nextEl: ".swiper-arrow--next",
-      prevEl: ".swiper-arrow--prev",
-    },
-  });
+  if (items > 1) {
+    return verticalSwiper = new Swiper(`${selector}`, {
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          navigation: false,
+          pagination: {
+            el: ".swiper-pagination",
+            type: "bullets",
+            clickable: true
+          }
+        },
+
+        641: {
+          slidesPerView: 2,
+          navigation: false,
+          spaceBetween: 15,
+          pagination: {
+            el: ".swiper-pagination",
+            type: "bullets",
+            clickable: true
+          }
+        },
+
+        1025: {
+          slidesPerView: items,
+          spaceBetween: space,
+          pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+          },
+          navigation: {
+            nextEl: ".swiper-arrow--next",
+            prevEl: ".swiper-arrow--prev",
+          },
+        }
+      }
+    });
+  }
+
+  if (items === 1) {
+    return verticalSwiper = new Swiper(`${selector}`, {
+            slidesPerView: items,
+            spaceBetween: space,
+            pagination: {
+              el: ".swiper-pagination",
+              type: "progressbar",
+            },
+            navigation: {
+              nextEl: ".swiper-arrow--next",
+              prevEl: ".swiper-arrow--prev",
+            },
+            breakpoints: {
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 10
+              },
+            },
+          });
+  }
+
+
+}
+
+class ResponsiveTabs {
+  constructor() {
+    this.wrapper = document.querySelector('.tab-element')
+    this.tabArea = this.wrapper.querySelector('.tabs-slider__area')
+    this.tabBody = this.wrapper.querySelector('.tab-body')
+    this.buttons = [...this.wrapper.querySelectorAll('.tab-navigation button')]
+    this.items = [...this.tabBody.querySelectorAll('.tab-item')]
+
+
+    this.buttons.forEach((button) => {
+      button.style.setProperty('--width', button.clientWidth)
+      button.addEventListener('click', this.changeTab.bind(this))
+    })
+  }
+
+  changeTab(event) {
+    this.tabArea.classList.add('tabs-slider__area--hidden')
+
+    const targetValue = event.target.dataset.target;
+
+    let currentButton = null,
+      siblingButtons = [];
+    let currentTab = null,
+      siblingTabs = [];
+
+    this.buttons.forEach((btn) => {
+      if (btn.dataset.target === targetValue) {
+        currentButton = btn
+      } else {
+        siblingButtons.push(btn)
+      }
+    });
+
+    this.items.forEach((item) => {
+      if (item.dataset.target === targetValue) {
+        currentTab = item
+      } else {
+        siblingTabs.push(item)
+      }
+    });
+    currentButton.classList.add('active')
+    siblingButtons.forEach((btn) => {
+      btn.classList.remove('active')
+    })
+
+    setTimeout(() => {
+      if (!currentTab || siblingTabs.length < 1) return;
+      currentTab.classList.add('active')
+      siblingTabs.forEach((tab) => {
+        tab.classList.remove('active')
+      })
+    }, 300);
+
+
+    setTimeout(() => {
+      this.tabArea.classList.remove('tabs-slider__area--hidden')
+    }, 500);
+  }
 }

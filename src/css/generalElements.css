@@ -34,17 +34,10 @@
   border-radius: 50px;
   border: 0;
   transition: all 0.3s;
+  display: inline-block;
   cursor: pointer;
   /*
   &--white-text {
-
-  }
-
-  &--accent-text {
-
-  }
-
-  &--white-border {
 
   }
   */
@@ -111,4 +104,30 @@
 }
 .button--with-arrow[disabled]:after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='11' viewBox='0 0 26 11' fill='none'%3E%3Cpath d='M1 5.5H25M25 5.5L20 1M25 5.5L20 10' stroke='rgba(138, 138, 153, 1)' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+.button--white-border {
+  color: var(--accent);
+  font-size: 17px;
+  font-weight: 500;
+  border: 1px solid var(--grey);
+  padding: 16px 32px;
+}
+.button--white-border:hover {
+  border-color: var(--accent);
+}
+.button--white-border:active, .button--white-border.active {
+  border-color: transparent;
+  color: var(--milk);
+  background: var(--accent);
+}
+.button--accent-text {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--accent);
+}
+.button--accent-text:hover {
+  color: var(--vulcan);
+}
+.button--accent-text:active {
+  color: var(--accent);
 }/*# sourceMappingURL=generalElements.css.map */

@@ -1,5 +1,6 @@
 .form-field {
     margin-bottom: 16px;
+
     .text-input {
         font-size: 17px;
         font-weight: 400;
@@ -10,7 +11,9 @@
         border-radius: 50px;
         outline: none;
         transition: ease-in-out 0.4s;
-        &:hover, &:focus {
+
+        &:hover,
+        &:focus {
             border-color: var(--accent);
         }
     }
@@ -19,6 +22,7 @@
         font-size: 14px;
         color: var(--darkGrey);
         margin-bottom: 12px;
+
         a {
             text-decoration: none;
             color: var(--accent);
@@ -27,7 +31,7 @@
 
     button {
         width: 100%;
-        
+
     }
 }
 
@@ -37,7 +41,9 @@
     border-radius: 50px;
     border: 0;
     transition: all 0.3s;
+    display: inline-block;
     cursor: pointer;
+
     &[disabled] {
         pointer-events: none;
     }
@@ -49,6 +55,7 @@
         font-weight: 500;
         color: var(--milk);
         background: var(--accent);
+
         &:hover {
             background: var(--vulcan);
         }
@@ -73,6 +80,7 @@
         font-weight: 500;
         color: var(--accent);
         position: relative;
+
         &:after {
             content: '';
             width: 24px;
@@ -95,6 +103,7 @@
             background-color: var(--accent);
             border-color: transparent;
             color: var(--milk);
+
             &:after {
                 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='11' viewBox='0 0 26 11' fill='none'%3E%3Cpath d='M1 5.5H25M25 5.5L20 1M25 5.5L20 10' stroke='rgba(247, 247, 248, 1)' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
             }
@@ -103,21 +112,47 @@
         &[disabled] {
             color: var(--darkGrey);
             border-color: var(--darkGrey);
+
             &:after {
                 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='11' viewBox='0 0 26 11' fill='none'%3E%3Cpath d='M1 5.5H25M25 5.5L20 1M25 5.5L20 10' stroke='rgba(138, 138, 153, 1)' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
             }
         }
     }
-    /*
-    &--white-text {
 
+    &--white-border {
+        color: var(--accent);
+        font-size: 17px;
+        font-weight: 500;
+        border: 1px solid var(--grey);
+        padding: 16px 32px;
+
+        &:hover {
+            border-color: var(--accent);
+        }
+
+        &:active,
+        &.active {
+            border-color: transparent;
+            color: var(--milk);
+            background: var(--accent);
+        }
     }
 
     &--accent-text {
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--accent);
+        &:hover {
+            color: var(--vulcan);
+        }
 
+        &:active {
+            color: var(--accent);
+        }
     }
 
-    &--white-border {
+    /*
+    &--white-text {
 
     }
     */

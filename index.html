@@ -11,269 +11,411 @@
 </head>
 
 <body>
-
   <div class="wrapper">
+    <section class="text-with-tabs">
+      <div class="text-block centered-block">
+        <div class="text-block__header">
+          <div class="text-block__header-title">
+            Примеры наших <span class="outlined">отчетов</span>
+          </div>
 
-    <div class="tabs-slider">
-
-      <div class="tabs-slider__nav">
-        
-      </div>
-
-      <div class="tabs-slider__body">
-        <div class="tabs-slider__inner">
-          <div class="swipe-slider-wrapper">
-            <div class="swiper tabs-slider__body vertical-swiper-js">
-              <div class="tabs-slider__arrows swiper-arrows">
-                <button class="tabs-slider__arrow tabs-slider__arrow--prev swiper-arrow swiper-arrow--prev">
-                  <span></span>
-                </button>
-                <button class="tabs-slider__arrow tabs-slider__arrow--next swiper-arrow swiper-arrow--next">
-                  <span></span>
-                </button>
-              </div>
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="tabs-slider__item">
-                    <div class="tabs-slider__item-image">
-                      <img src="/static/images/bentley.jpg" alt="bentley">
-                    </div>
-
-                    <div class="tabs-slider__item-details">
-                      <div class="tabs-slider__item-name">2019 Bentley Continental GT 3</div>
-                      <div class="tabs-slider__item-run">10 833 км</div>
-
-                      <button class="button button--with-arrow modal-btn-js" data-car="bentley">
-                        Смотреть отчёт
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="tabs-slider__item">
-                    <div class="tabs-slider__item-image">
-                      <img src="/static/images/rollsRoys1.jpg" alt="rollsRoys">
-                    </div>
-
-                    <div class="tabs-slider__item-details">
-                      <div class="tabs-slider__item-name">2014 Rolls-Royce Wraith</div>
-                      <div class="tabs-slider__item-run">17 750 км</div>
-
-                      <button class="button button--with-arrow modal-btn-js" data-car="testCar">
-                        Смотреть отчёт
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="tabs-slider__item">
-                    <div class="tabs-slider__item-image">
-                      <img src="/static/images/rollsRoys1.jpg" alt="rollsRoys">
-                    </div>
-
-                    <div class="tabs-slider__item-details">
-                      <div class="tabs-slider__item-name">test name</div>
-                      <div class="tabs-slider__item-run">XXXXXX км</div>
-
-                      <button class="button button--with-arrow">
-                        Смотреть отчёт
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="tabs-slider__item">
-                    <div class="tabs-slider__item-image">
-                      <img src="/static/images/rollsRoys1.jpg" alt="rollsRoys">
-                    </div>
-
-                    <div class="tabs-slider__item-details">
-                      <div class="tabs-slider__item-name">test name</div>
-                      <div class="tabs-slider__item-run">XXXXXX км</div>
-
-                      <button class="button button--with-arrow">
-                        Смотреть отчёт
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="tabs-slider__item">
-                    <div class="tabs-slider__item-image">
-                      <img src="/static/images/rollsRoys1.jpg" alt="rollsRoys">
-                    </div>
-
-                    <div class="tabs-slider__item-details">
-                      <div class="tabs-slider__item-name">test name</div>
-                      <div class="tabs-slider__item-run">XXXXXX км</div>
-
-                      <button class="button button--with-arrow">
-                        Смотреть отчёт
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-              <div class="tabs-slider__progress swiper-pagination"></div>
-            </div>
+          <div class="text-block__header-link">
+            <a href="#" class="button button--accent-text">Объективная проверка</a>
+          </div>
+        </div>
+        <div class="text-block__body">
+          <div class="text-block__body-left">
+            Наши клиенты получают точную информацию о машине, которую они хотят приобрести: будь это семейный
+            автомобиль, служебное авто или просто замена прежнего транспортного средства - мы позаботимся, чтобы у вас
+            была полная информация о её реальном состоянии.
+          </div>
+          <div class="text-block__body-right">
+            Ниже можно ознакомиться с некоторыми отчётами по проверенным нами авто. Для удобства мы разбили
+            эти примеры по категориям и в каждой разместили наиболее интересные случаи. Все отчёты можно посмотреть
+            в соответствующем разделе.
           </div>
         </div>
       </div>
 
-      <div class="tabls-slider__body">
-        
+      <div class="tabs-slider tab-element">
+        <div class="tabs-slider__nav tab-navigation">
+          <div class="tabs-slider__nav-inner">
+            <button class="button button--white-border tab-button active" data-target="tab-1">Премиум-класс</button>
+            <button class="button button--white-border tab-button" data-target="tab-2">Кроссоверы и джипы</button>
+            <button class="button button--white-border tab-button">Седаны</button>
+            <button class="button button--white-border tab-button">Купе и хэтчбеки</button>
+            <button class="button button--white-border tab-button">Коммерческий транспорт</button>
+            <button class="button button--white-border tab-button">Мототехника</button>
+            <button class="button button--white-border tab-button">
+              Эксклюзив
+              <i class="button-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M18.3109 14.2301C17.9299 14.0595 17.4885 14.2316 17.3205 14.6096C17.3051 14.643 15.7706 17.9895 11.943 18.0345C11.9194 18.0345 11.8961 18.0353 11.8725 18.0353C8.27102 18.0353 6.71775 14.7454 6.65327 14.604C6.48192 14.229 6.03942 14.0621 5.66142 14.232C5.28417 14.4026 5.11655 14.8463 5.28717 15.2242C5.36705 15.4016 7.28817 19.5353 11.8695 19.5353C11.8995 19.5353 11.9303 19.5345 11.9603 19.5345C16.7385 19.4783 18.6128 15.3941 18.6897 15.2205C18.8595 14.8418 18.6889 14.3985 18.3109 14.2301L18.3109 14.2301ZM12 0C5.37225 0 0 5.37225 0 12C0 18.6277 5.37225 24 12 24C18.6278 24 24 18.6277 24 12C24 5.37225 18.6278 0 12 0ZM12 22.5C6.21037 22.5 1.5 17.7896 1.5 12C1.5 6.21037 6.21037 1.5 12 1.5C17.7896 1.5 22.5 6.21037 22.5 12C22.5 17.7896 17.7896 22.5 12 22.5ZM8.23837 11.2459C9.06487 11.2459 9.73462 10.5758 9.73462 9.75C9.73462 8.92425 9.06487 8.25412 8.23837 8.25412C7.4115 8.25412 6.74213 8.92423 6.74213 9.75C6.74213 10.5758 7.4115 11.2459 8.23837 11.2459ZM15.7384 11.2459C16.5649 11.2459 17.2346 10.5758 17.2346 9.75C17.2346 8.92425 16.5649 8.25412 15.7384 8.25412C14.9115 8.25412 14.2421 8.92423 14.2421 9.75C14.2421 10.5758 14.9115 11.2459 15.7384 11.2459Z"
+                    fill="#FF1616" />
+                </svg>
+              </i>
+            </button>
+          </div>
+        </div>
+        <div class="tabs-slider__area">
+          <div class="tab-body">
+            <div class="tabs-slider__outer tab-item active" data-target="tab-1">
+              <div class="tabs-slider__inner">
+                <div class="swipe-slider-wrapper">
+                  <div class="swiper tabs-slider__body vertical-swiper-js">
+                    <div class="tabs-slider__arrows swiper-arrows">
+                      <button class="tabs-slider__arrow tabs-slider__arrow--prev swiper-arrow swiper-arrow--prev">
+                        <span></span>
+                      </button>
+                      <button class="tabs-slider__arrow tabs-slider__arrow--next swiper-arrow swiper-arrow--next">
+                        <span></span>
+                      </button>
+                    </div>
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="tabs-slider__item">
+                          <div class="tabs-slider__item-image">
+                            <img src="https://raw.githubusercontent.com/BoykoViktor/autoexpert/preview/static/images/bentley.jpg" alt="bentley">
+                          </div>
+
+                          <div class="tabs-slider__item-details">
+                            <div class="tabs-slider__item-name">2019 Bentley Continental GT 3</div>
+                            <div class="tabs-slider__item-run">10 833 км</div>
+
+                            <button class="button button--with-arrow modal-btn-js" data-car="bentley">
+                              Смотреть отчёт
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="tabs-slider__item">
+                          <div class="tabs-slider__item-image">
+                            <img src="https://raw.githubusercontent.com/BoykoViktor/autoexpert/preview/static/images/rollsRoys1.jpg" alt="rollsRoys">
+                          </div>
+
+                          <div class="tabs-slider__item-details">
+                            <div class="tabs-slider__item-name">2014 Rolls-Royce Wraith</div>
+                            <div class="tabs-slider__item-run">17 750 км</div>
+
+                            <button class="button button--with-arrow modal-btn-js" data-car="testCar">
+                              Смотреть отчёт
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="tabs-slider__item">
+                          <div class="tabs-slider__item-image">
+                            <img src="https://raw.githubusercontent.com/BoykoViktor/autoexpert/preview/static/images/rollsRoys1.jpg" alt="rollsRoys">
+                          </div>
+
+                          <div class="tabs-slider__item-details">
+                            <div class="tabs-slider__item-name">test name</div>
+                            <div class="tabs-slider__item-run">XXXXXX км</div>
+
+                            <button class="button button--with-arrow">
+                              Смотреть отчёт
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="tabs-slider__item">
+                          <div class="tabs-slider__item-image">
+                            <img src="https://raw.githubusercontent.com/BoykoViktor/autoexpert/preview/static/images/rollsRoys1.jpg" alt="rollsRoys">
+                          </div>
+
+                          <div class="tabs-slider__item-details">
+                            <div class="tabs-slider__item-name">test name</div>
+                            <div class="tabs-slider__item-run">XXXXXX км</div>
+
+                            <button class="button button--with-arrow">
+                              Смотреть отчёт
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="tabs-slider__item">
+                          <div class="tabs-slider__item-image">
+                            <img src="https://raw.githubusercontent.com/BoykoViktor/autoexpert/preview/static/images/rollsRoys1.jpg" alt="rollsRoys">
+                          </div>
+
+                          <div class="tabs-slider__item-details">
+                            <div class="tabs-slider__item-name">test name</div>
+                            <div class="tabs-slider__item-run">XXXXXX км</div>
+
+                            <button class="button button--with-arrow">
+                              Смотреть отчёт
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="tabs-slider__progress swiper-pagination"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tabs-slider__outer tab-item" data-target="tab-2">
+              <div class="tabs-slider__inner">
+                <div class="swipe-slider-wrapper">
+                  <div class="swiper tabs-slider__body vertical-swiper-js">
+                    <div class="tabs-slider__arrows swiper-arrows">
+                      <button class="tabs-slider__arrow tabs-slider__arrow--prev swiper-arrow swiper-arrow--prev">
+                        <span></span>
+                      </button>
+                      <button class="tabs-slider__arrow tabs-slider__arrow--next swiper-arrow swiper-arrow--next">
+                        <span></span>
+                      </button>
+                    </div>
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="tabs-slider__item">
+                          <div class="tabs-slider__item-image">
+                            <img src="https://raw.githubusercontent.com/BoykoViktor/autoexpert/preview/static/images/bentley.jpg" alt="bentley">
+                          </div>
+
+                          <div class="tabs-slider__item-details">
+                            <div class="tabs-slider__item-name">Second slide car 1</div>
+                            <div class="tabs-slider__item-run">XX XXX км</div>
+
+                            <button class="button button--with-arrow modal-btn-js" data-car="bentley">
+                              Смотреть отчёт
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="tabs-slider__item">
+                          <div class="tabs-slider__item-image">
+                            <img src="https://raw.githubusercontent.com/BoykoViktor/autoexpert/preview/static/images/bentley.jpg" alt="bentley">
+                          </div>
+
+                          <div class="tabs-slider__item-details">
+                            <div class="tabs-slider__item-name">Second slide car 2</div>
+                            <div class="tabs-slider__item-run">XX XXX км</div>
+
+                            <button class="button button--with-arrow modal-btn-js" data-car="bentley">
+                              Смотреть отчёт
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="tabs-slider__item">
+                          <div class="tabs-slider__item-image">
+                            <img src="https://raw.githubusercontent.com/BoykoViktor/autoexpert/preview/static/images/bentley.jpg" alt="bentley">
+                          </div>
+
+                          <div class="tabs-slider__item-details">
+                            <div class="tabs-slider__item-name">Second slide car 3</div>
+                            <div class="tabs-slider__item-run">XX XXX км</div>
+
+                            <button class="button button--with-arrow modal-btn-js" data-car="bentley">
+                              Смотреть отчёт
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">x
+                        <div class="tabs-slider__item">
+                          <div class="tabs-slider__item-image">
+                            <img src="https://raw.githubusercontent.com/BoykoViktor/autoexpert/preview/static/images/bentley.jpg" alt="bentley">
+                          </div>
+
+                          <div class="tabs-slider__item-details">
+                            <div class="tabs-slider__item-name">Second slide car 4</div>
+                            <div class="tabs-slider__item-run">XX XXX км</div>
+
+                            <button class="button button--with-arrow modal-btn-js" data-car="bentley">
+                              Смотреть отчёт
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="tabs-slider__item">
+                          <div class="tabs-slider__item-image">
+                            <img src="https://raw.githubusercontent.com/BoykoViktor/autoexpert/preview/static/images/bentley.jpg" alt="bentley">
+                          </div>
+
+                          <div class="tabs-slider__item-details">
+                            <div class="tabs-slider__item-name">Second slide car 5</div>
+                            <div class="tabs-slider__item-run">XX XXX км</div>
+
+                            <button class="button button--with-arrow modal-btn-js" data-car="bentley">
+                              Смотреть отчёт
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tabs-slider__progress swiper-pagination"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tabs-slider__more-link centered-block">
+          <a href="#" class="button button--with-arrow">Смотреть все отчёты</a>
+        </div>
       </div>
-    </div>
 
-  </div>
+    </section>
 
-  <div class="popup-modal" style="display: none;">
-    <div class="popup-modal__inner">
-      <div class="popup-modal__body">
-        <div class="popup-modal__close popup-close-js"></div>
-        <div class="popup-modal__content">
-          <div class="details">
-            <div class="details__name"></div>
-            <div class="details__type"></div>
-            <div class="details__image"></div>
-            <div class="details__thumbs"></div>
+    <div class="popup-modal" style="display: none;">
+      <div class="popup-modal__inner">
+        <div class="popup-modal__body">
+          <div class="popup-modal__close popup-close-js"></div>
+          <div class="popup-modal__content">
+            <div class="details">
+              <div class="details__name"></div>
+              <div class="details__type"></div>
+              <div class="details__image"></div>
+              <div class="details__thumbs"></div>
 
-            <div class="details__params">
-              <div class="details__param">
-                <div class="details__params-title">Год</div>
-                <div class="details__params-body" data-name="year"></div>
+              <div class="details__params">
+                <div class="details__param">
+                  <div class="details__params-title">Год</div>
+                  <div class="details__params-body" data-name="year"></div>
+                </div>
+
+                <div class="details__param">
+                  <div class="details__params-title">Пробег</div>
+                  <div class="details__params-body" data-name="mileage"></div>
+                </div>
+
+                <div class="details__param">
+                  <div class="details__params-title">Кузов</div>
+                  <div class="details__params-body" data-name="carcase"></div>
+                </div>
+
+                <div class="details__param">
+                  <div class="details__params-title">Цвет</div>
+                  <div class="details__params-body" data-name="color"></div>
+                </div>
+
+                <div class="details__param">
+                  <div class="details__params-title">Комплектация</div>
+                  <div class="details__params-body" data-name="equipment"></div>
+                </div>
+
+                <div class="details__param">
+                  <div class="details__params-title">Привод</div>
+                  <div class="details__params-body" data-name="gear"></div>
+                </div>
+
+                <div class="details__param">
+                  <div class="details__params-title">Двигатель</div>
+                  <div class="details__params-body" data-name="engine"></div>
+                </div>
+
+                <div class="details__param">
+                  <div class="details__params-title">Коробка</div>
+                  <div class="details__params-body" data-name="transmission"></div>
+                </div>
+
+                <div class="details__param">
+                  <div class="details__params-title">Руль</div>
+                  <div class="details__params-body" data-name="rudder"></div>
+                </div>
+
+                <div class="details__param">
+                  <div class="details__params-title">Владельцы</div>
+                  <div class="details__params-body" data-name="owners"></div>
+                </div>
+
+                <div class="details__param">
+                  <div class="details__params-title">ПТС</div>
+                  <div class="details__params-body" data-name="pts"></div>
+                </div>
+
+                <div class="details__param">
+                  <div class="details__params-title">Владение</div>
+                  <div class="details__params-body" data-name="holded"></div>
+                </div>
+
+                <div class="details__param">
+                  <div class="details__params-title">Таможня</div>
+                  <div class="details__params-body" data-name="customs"></div>
+                </div>
+
+                <div class="details__param">
+                  <div class="details__params-title">VIN</div>
+                  <div class="details__params-body" data-name="vin"></div>
+                </div>
+
+                <div class="details__param">
+                  <div class="details__params-title">Состояние</div>
+                  <div class="details__params-body" data-name="condition"></div>
+                </div>
               </div>
 
-              <div class="details__param">
-                <div class="details__params-title">Пробег</div>
-                <div class="details__params-body" data-name="mileage"></div>
+              <div class="details__review">
+                <div class="details__review-title">Детализированный осмотр</div>
+                <div class="details__review-note"></div>
+
+                <div class="details__review-slider"></div>
               </div>
 
-              <div class="details__param">
-                <div class="details__params-title">Кузов</div>
-                <div class="details__params-body" data-name="carcase"></div>
-              </div>
-
-              <div class="details__param">
-                <div class="details__params-title">Цвет</div>
-                <div class="details__params-body" data-name="color"></div>
-              </div>
-
-              <div class="details__param">
-                <div class="details__params-title">Комплектация</div>
-                <div class="details__params-body" data-name="equipment"></div>
-              </div>
-
-              <div class="details__param">
-                <div class="details__params-title">Привод</div>
-                <div class="details__params-body" data-name="gear"></div>
-              </div>
-
-              <div class="details__param">
-                <div class="details__params-title">Двигатель</div>
-                <div class="details__params-body" data-name="engine"></div>
-              </div>
-
-              <div class="details__param">
-                <div class="details__params-title">Коробка</div>
-                <div class="details__params-body" data-name="transmission"></div>
-              </div>
-
-              <div class="details__param">
-                <div class="details__params-title">Руль</div>
-                <div class="details__params-body" data-name="rudder"></div>
-              </div>
-
-              <div class="details__param">
-                <div class="details__params-title">Владельцы</div>
-                <div class="details__params-body" data-name="owners"></div>
-              </div>
-
-              <div class="details__param">
-                <div class="details__params-title">ПТС</div>
-                <div class="details__params-body" data-name="pts"></div>
-              </div>
-
-              <div class="details__param">
-                <div class="details__params-title">Владение</div>
-                <div class="details__params-body" data-name="holded"></div>
-              </div>
-
-              <div class="details__param">
-                <div class="details__params-title">Таможня</div>
-                <div class="details__params-body" data-name="customs"></div>
-              </div>
-
-              <div class="details__param">
-                <div class="details__params-title">VIN</div>
-                <div class="details__params-body" data-name="vin"></div>
-              </div>
-
-              <div class="details__param">
-                <div class="details__params-title">Состояние</div>
-                <div class="details__params-body" data-name="condition"></div>
+              <div class="details__conclusion">
+                <div class="details__conclusion-title"></div>
+                <div class="details__conclusion-text"></div>
               </div>
             </div>
 
-            <div class="details__review">
-              <div class="details__review-title">Детализированный осмотр</div>
-              <div class="details__review-note"></div>
+            <div class="popup-modal__form">
+              <form method="post">
+                <div class="popup-modal__form-title">
+                  Для получения быстрой помощи закажите звонок или свяжитесь с нами сразу напрямую:
+                </div>
 
-              <div class="details__review-slider"></div>
+                <div class="form-field">
+                  <input type="text" class="text-input" placeholder="Ваше имя">
+                </div>
+
+                <div class="form-field">
+                  <input type="tel" class="text-input" placeholder="Телефон">
+                </div>
+
+                <div class="form-field">
+                  <span class="note">
+                    Нажимая кнопку, вы соглашаетесь с нашей <a href="javascript:void(0)"> Политикой
+                      конфиденциальности</a>
+                  </span>
+                </div>
+
+                <div class="form-field">
+                  <button type="submit" class="button button--accent-fill">
+                    Заказать звонок
+                  </button>
+                </div>
+              </form>
+
+              <div class="numbers">
+                <a href="tel:88005053503">8 800 505-35-03</a>
+                <a href="tel:89267070703">8 926 707-07-03</a>
+              </div>
             </div>
 
-            <div class="details__conclusion">
-              <div class="details__conclusion-title"></div>
-              <div class="details__conclusion-text"></div>
-            </div>
+            <button class="button button--accent-fill popup-close-js">
+              Закрыть
+            </button>
           </div>
-
-          <div class="popup-modal__form">
-            <form method="post">
-              <div class="popup-modal__form-title">
-                Для получения быстрой помощи закажите звонок или свяжитесь с нами сразу напрямую:
-              </div>
-
-              <div class="form-field">
-                <input type="text" class="text-input" placeholder="Ваше имя">
-              </div>
-
-              <div class="form-field">
-                <input type="tel" class="text-input" placeholder="Телефон">
-              </div>
-
-              <div class="form-field">
-                <span class="note">
-                  Нажимая кнопку, вы соглашаетесь с нашей <a href="javascript:void(0)"> Политикой конфиденциальности</a>
-                </span>
-              </div>
-
-              <div class="form-field">
-                <button type="submit" class="button button--accent-fill">
-                  Заказать звонок
-                </button>
-              </div>
-            </form>
-
-            <div class="numbers">
-              <a href="tel:88005053503">8 800 505-35-03</a>
-              <a href="tel:89267070703">8 926 707-07-03</a>
-            </div>
-          </div>
-
-          <button class="button button--accent-fill popup-close-js">
-            Закрыть
-          </button>
         </div>
       </div>
     </div>
   </div>
-
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="src/js/cars.js"></script>
   <script src="src/js/main.js"></script>

@@ -19,6 +19,7 @@
   font-size: 14px;
   color: var(--darkGrey);
   margin-bottom: 12px;
+  padding-top: 12px;
 }
 .form-field .note a {
   text-decoration: none;

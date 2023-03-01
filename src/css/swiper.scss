@@ -100,8 +100,12 @@ body {
   }
 
   .popup-slider {
+    margin-bottom: 80px;
     &__item {
       margin-bottom: 45px;
+      @media all and (max-width: 640px) {
+        margin-bottom: 32px;
+      }
       &-image {
         margin-bottom: 24px;
       }
@@ -113,11 +117,16 @@ body {
         text-align: left;
       }
     }
-
-
-    .swiper-pagination-progressbar {
+    
+    .swiper-pagination-progressbar,
+    .swiper-pagination {
       position: static;
-      margin-bottom: 45px;
+      font-size: 0;
+    }
+    
+    .swiper-arrows {
+      justify-content: center;
+      padding-top: 48px;
     }
   }
 }

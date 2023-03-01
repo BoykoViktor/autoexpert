@@ -18,7 +18,7 @@ class ReportPopupModal {
     this.form = this.popup.querySelector('form')
 
     this.cars = carsInfo
-    this.imagesUrl = 'https://raw.githubusercontent.com/BoykoViktor/autoexpert/preview/static/images/'
+    this.imagesUrl = 'static/images/'
 
     this.buttons.forEach((button) => {
       button.addEventListener('click', this.open.bind(this))
@@ -185,19 +185,28 @@ function verticalSlider(selector, items = 3) {
     return verticalSwiper = new Swiper(`${selector}`, {
             slidesPerView: items,
             spaceBetween: space,
-            pagination: {
-              el: ".swiper-pagination",
-              type: "progressbar",
-            },
-            navigation: {
-              nextEl: ".swiper-arrow--next",
-              prevEl: ".swiper-arrow--prev",
-            },
             breakpoints: {
               320: {
                 slidesPerView: 1,
-                spaceBetween: 10
+                spaceBetween: 0,
+                navigator: false,
+                pagination: {
+                  el: ".swiper-pagination",
+                  type: "bullets",
+                }
               },
+              
+
+              1024: {
+                pagination: {
+                  el: ".swiper-pagination",
+                  type: "progressbar",
+                },
+                navigation: {
+                  nextEl: ".swiper-arrow--next",
+                  prevEl: ".swiper-arrow--prev",
+                },
+              }
             },
           });
   }
@@ -215,7 +224,7 @@ class ResponsiveTabs {
 
 
     this.buttons.forEach((button) => {
-      button.style.setProperty('--width', button.clientWidth)
+      //const str = button.innerText
       button.addEventListener('click', this.changeTab.bind(this))
     })
   }

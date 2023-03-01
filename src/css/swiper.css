@@ -90,8 +90,16 @@ body .swiper-arrow.swiper-button-disabled {
 body .swiper-arrow.swiper-button-disabled span {
   background-image: url("data:image/svg+xml,%3Csvg width='54' height='18' viewBox='0 0 54 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9L53 9M53 9L45.5714 0.999999M53 9L45.5714 17' stroke='rgba(202, 202, 208, 1)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 }
+body .popup-slider {
+  margin-bottom: 80px;
+}
 body .popup-slider__item {
   margin-bottom: 45px;
+}
+@media all and (max-width: 640px) {
+  body .popup-slider__item {
+    margin-bottom: 32px;
+  }
 }
 body .popup-slider__item-image {
   margin-bottom: 24px;
@@ -102,7 +110,12 @@ body .popup-slider__item-note {
   color: var(--darkGrey);
   text-align: left;
 }
-body .popup-slider .swiper-pagination-progressbar {
+body .popup-slider .swiper-pagination-progressbar,
+body .popup-slider .swiper-pagination {
   position: static;
-  margin-bottom: 45px;
+  font-size: 0;
+}
+body .popup-slider .swiper-arrows {
+  justify-content: center;
+  padding-top: 48px;
 }/*# sourceMappingURL=swiper.css.map */

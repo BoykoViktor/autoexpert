@@ -23,7 +23,9 @@ body.overflow_h {
   transition: ease-in-out 0.3s;
   pointer-events: none;
   z-index: 1000;
-
+  @media all and (max-width: 640px) {
+    padding: 20px 0;
+  }
   &__inner {
     max-height: 100%;
     max-width: 800px;
@@ -35,6 +37,9 @@ body.overflow_h {
     position: relative;
     padding: 100px 98px 98px;
     border-radius: 32px;
+    @media all and (max-width: 960px) {
+      padding: 94px 20px 24px;
+    }
   }
 
   &__close {

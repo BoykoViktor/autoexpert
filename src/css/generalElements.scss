@@ -1,6 +1,5 @@
 .form-field {
     margin-bottom: 16px;
-
     .text-input {
         font-size: 17px;
         font-weight: 400;
@@ -22,7 +21,7 @@
         font-size: 14px;
         color: var(--darkGrey);
         margin-bottom: 12px;
-
+        padding-top: 12px;
         a {
             text-decoration: none;
             color: var(--accent);
@@ -150,11 +149,4 @@
             color: var(--accent);
         }
     }
-
-    /*
-    &--white-text {
-
-    }
-    */
-
 }

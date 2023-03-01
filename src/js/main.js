@@ -243,7 +243,7 @@ class ResponsiveTabs {
       if (btn.dataset.target === targetValue) {
         currentButton = btn
       } else {
-        siblingButtons.push(btn)
+        siblingButtons.push(btn) 
       }
     });
 
